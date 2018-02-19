@@ -25,3 +25,4 @@ module OrderProject
       generate.controller_specs false
   end
 end
+end
