@@ -14,12 +14,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
 group :development, :test do
+  gem 'launchy'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'pry-byebug'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :development do

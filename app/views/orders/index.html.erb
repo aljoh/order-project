@@ -1,0 +1,22 @@
+<h1>Orders</h1>
+<table>
+<tr>
+  <th>Order number</th>
+  <th>Customer</th>
+  <th>Area</th>
+  <th>Units</th>
+  <th>Order date</th>
+  <th>Note</th>
+</tr>
+
+<% @orders.each do |order| %>
+<tr>
+  <td><%= order.number %></td>
+  <td><%= order.customer %></td>
+  <td><%= order.area %></td>
+  <td><%= order.units %></td>
+  <td><%= order.order_date %></td>
+  <td><%= order.note %></td>
+</tr>
+<% end %>
+</table>

@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :order do
-    number "MyString"
-    customer "MyString"
-    area "MyString"
-    units 1
-    order_date "MyString"
-    note "MyString"
+    number "KO02020202"
+    customer "GBG Stad"
+    area "AFH"
+    units 10
+    order_date "2018-02-10"
+    note "ASAP"
   end
 end
