@@ -5,7 +5,12 @@ class OrdersController < ApplicationController
   end
 
   def create
-    Order.create(order_params)
+    order = Order.create(order_params)
+    if order.persisted?
+      flash[:notice] = "Order created"
+    else
+      flash[:notice] = order.errors.full_messages
+    end
     redirect_back(fallback_location: root_path)
   end
 

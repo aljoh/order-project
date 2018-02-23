@@ -9,4 +9,18 @@ Feature: Visit Homepage
 
   Scenario: User visits homepage
     Given I visit the landing page
-    And show me the page
+    Then I should see "KO02030303"
+    And I should see "KO02020202"
+    And I should see "KO02040404"
+
+  Scenario: User creates new order
+    Given I visit the landing page
+    And I fill in "Number" with "KO02050505"
+    And I fill in "Customer" with "Varberg"
+    And I fill in "Area" with "Varberg"
+    And I fill in "Units" with "3"
+    And I fill in "Order date" with "2018-02-05"
+    And I fill in "Note" with "ASAP"
+    And I click on "Create Order"
+    Then I should see "KO02050505"
+    And I should see "Order created"
