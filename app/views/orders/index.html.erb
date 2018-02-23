@@ -22,6 +22,7 @@
   <th>Area</th>
   <th>Units</th>
   <th>Order date</th>
+  <th>Days left</th>
   <th>Note</th>
 </tr>
 
@@ -32,6 +33,7 @@
   <td><%= order.area %></td>
   <td><%= order.units %></td>
   <td><%= order.order_date %></td>
+  <td><%= days_left(order) %></td>
   <td><%= order.note %></td>
 </tr>
 <% end %>

@@ -44,6 +44,9 @@ GEM
     backports (3.11.0)
     bindex (0.5.0)
     builder (3.2.3)
+    business_time (0.9.3)
+      activesupport (>= 3.2.0)
+      tzinfo
     byebug (9.1.0)
     capybara (2.17.0)
       addressable
@@ -232,6 +235,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  business_time
   coffee-rails (~> 4.2)
   cucumber-rails
   database_cleaner
