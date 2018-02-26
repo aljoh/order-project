@@ -20,7 +20,8 @@ Feature: Visit Homepage
     And I fill in "Order date" with "2018-02-05"
     And I fill in "Note" with "ASAP"
     And I click on "Create Order"
-    And show me the page
     Then I should see "KO02050505"
     And I should see "Order created"
     And I should see "Arrived"
+
+  Scenario: User edits order

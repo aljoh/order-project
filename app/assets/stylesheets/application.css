@@ -16,3 +16,11 @@ td, th {
 .Arrived {
   background-color: grey;
 }
+
+.Ready {
+  background-color: blue;
+}
+
+.Delivered {
+  background-color: green;
+}

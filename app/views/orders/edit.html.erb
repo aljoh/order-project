@@ -1,0 +1,20 @@
+<h1>Edit Order</h1>
+
+<%= form_for @order do |form| %>
+<%= form.label :number %>
+<%= form.text_field :number %>
+<%= form.label :customer %>
+<%= form.select :customer, ['GBG Stad', 'VoO', 'Varberg PC', 'Varberg iPad'] %>
+<%= form.label :area %>
+<%= form.text_field :area %>
+<%= form.label :units %>
+<%= form.text_field :units %>
+<%= form.label :order_date %>
+<%= form.text_field :order_date %>
+<%= form.label :note %>
+<%= form.text_field :note %>
+<%= form.label :state %>
+<%= form.select :state, ['Arrived', 'Ready', 'Delivered', 'Done'] %>
+
+<%= form.submit %>
+<% end %>

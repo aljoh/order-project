@@ -21,5 +21,5 @@ Given("I fill in {string} with {string}") do |field, value|
 end
 
 Given("I click on {string}") do |button|
-  click_button button
+  click_link_or_button button
 end

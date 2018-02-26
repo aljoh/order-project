@@ -9,7 +9,7 @@
   <%= f.label :units %>:
   <%= f.text_field :units %>
   <%= f.label :order_date %>:
-  <%= f.text_field :order_date %>
+  <%= f.text_field :order_date, placeholder: "2000-01-01" %>
   <%= f.label :note %>:
   <%= f.text_field :note %>
   <%= f.submit %>
@@ -37,6 +37,7 @@
   <td><%= days_left(order) %></td>
   <td><%= order.note %></td>
   <td><%= order.state %></td>
+  <td><%= link_to 'Edit', edit_order_path(order) %></td>
 </tr>
 <% end %>
 </table>
