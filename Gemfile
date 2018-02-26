@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'business_time'
+gem 'state_machine'
 
 group :development, :test do
   gem 'launchy'
@@ -24,6 +25,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'state_machines-rspec'
 end
 
 group :development do
