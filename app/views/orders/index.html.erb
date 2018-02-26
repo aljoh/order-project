@@ -24,6 +24,7 @@
   <th>Order date</th>
   <th>Days left</th>
   <th>Note</th>
+  <th>State</th>
 </tr>
 
 <% @orders.each do |order| %>
@@ -35,6 +36,7 @@
   <td><%= order.order_date %></td>
   <td><%= days_left(order) %></td>
   <td><%= order.note %></td>
+  <td><%= order.state %></td>
 </tr>
 <% end %>
 </table>
