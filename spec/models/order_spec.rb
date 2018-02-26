@@ -17,6 +17,10 @@ RSpec.describe Order, type: :model do
     it { is_expected.to validate_presence_of :order_date }
   end
 
+  describe 'states' do
+    it { is_expected.to have_states :arrived, :ready, :delivered, :done}
+  end
+
   describe FactoryBot do
     it 'should be valid' do
       expect(FactoryBot.create(:order)).to be_valid
