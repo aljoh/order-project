@@ -16,8 +16,6 @@ Feature: Visit Homepage
   Scenario: User creates new order
     Given I visit the landing page
     And I fill in "Number" with "KO02050505"
-    And I fill in "Customer" with "Varberg"
-    And I fill in "Area" with "Varberg"
     And I fill in "Units" with "3"
     And I fill in "Order date" with "2018-02-05"
     And I fill in "Note" with "ASAP"

@@ -18,7 +18,7 @@ RSpec.describe Order, type: :model do
   end
 
   describe 'states' do
-    it { is_expected.to have_states :arrived, :ready, :delivered, :done}
+    it { is_expected.to have_states :Arrived, :Ready, :Delivered, :Done}
   end
 
   describe FactoryBot do
