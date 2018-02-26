@@ -3,7 +3,7 @@
   <%= f.label :number %>:
   <%= f.text_field :number %>
   <%= f.label :customer %>:
-  <%= f.text_field :customer %>
+  <%= f.select :customer, ['GBG Stad', 'VoO', 'Varberg PC', 'Varberg iPad'] %>
   <%= f.label :area %>:
   <%= f.text_field :area %>
   <%= f.label :units %>:
@@ -28,7 +28,7 @@
 </tr>
 
 <% @orders.each do |order| %>
-<tr>
+<tr class="<%=order.state %>">
   <td><%= order.number %></td>
   <td><%= order.customer %></td>
   <td><%= order.area %></td>
