@@ -13,3 +13,32 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+function filterTable(value, index) {
+  table = document.getElementById("orderTable");
+  tr = table.getElementsByTagName("tr");
+  for ( i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[index];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(value) > -1 || value == 'ALL') {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function filterCustomers() {
+  value = document.getElementById("customerInput").value.toUpperCase();
+  filterTable(value, 1);
+}
+
+function filterNumbers() {
+  value = document.getElementById("numberInput").value.toUpperCase();
+  filterTable(value, 0);
+}
+
+function filterState() {
+  value = document.getElementById("stateInput").value.toUpperCase();
+  filterTable(value, 7);
+}

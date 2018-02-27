@@ -15,16 +15,37 @@
   <%= f.submit %>
   <% end %>
 <h1>Orders</h1>
-<table>
+<table id="orderTable">
 <tr>
-  <th>Order number</th>
-  <th>Customer</th>
+  <th>
+    Order number
+    <input type="text" id="numberInput" onkeyup="filterNumbers()" />
+  </th>
+  <th>
+    Customer
+    <select type="text" id="customerInput" onchange="filterCustomers()">
+      <option value="all">All</option>
+      <option value="GBG Stad">GBG Stad</option>
+      <option value="VoO">VoO</option>
+      <option value="Varberg PC">Varberg PC</option>
+      <option value="Varberg iPad">Varberg iPad</option>
+    </select>
+  </th>
   <th>Area</th>
   <th>Units</th>
   <th>Order date</th>
   <th>Days left</th>
   <th>Note</th>
-  <th>State</th>
+  <th>
+    State
+    <select type="text" id="stateInput" onchange="filterState()">
+      <option value="all">All</option>
+      <option value="Arrived">Arrived</option>
+      <option value="Ready">Ready</option>
+      <option value="Delivered">Delivered</option>
+      <option value="Done">Done</option>
+    </select>
+  </th>
 </tr>
 
 <% @orders.each do |order| %>
