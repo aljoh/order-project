@@ -24,6 +24,12 @@ class OrdersController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    order = Order.find(params[:id])
+    order.destroy
+    redirect_to root_path
+  end
+
   private
 
   def order_params

@@ -58,7 +58,10 @@
   <td><%= days_left(order) %></td>
   <td><%= order.note %></td>
   <td><%= order.state %></td>
-  <td><%= link_to 'Edit', edit_order_path(order) %></td>
+  <td>
+    <%= link_to 'Edit', edit_order_path(order) %>
+    <%= link_to 'Delete', order_path(order), method: :delete, data: { confirm: 'Are you sure?'}%>
+  </td>
 </tr>
 <% end %>
 </table>
