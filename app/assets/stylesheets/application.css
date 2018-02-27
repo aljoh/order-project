@@ -14,13 +14,13 @@ td, th {
 }
 
 .Arrived {
-  background-color: grey;
+  background-color: rgb(159, 161, 154);
 }
 
 .Ready {
-  background-color: blue;
+  background-color: rgb(5, 200, 219);
 }
 
 .Delivered {
-  background-color: green;
+  background-color: rgb(54, 209, 28);
 }
