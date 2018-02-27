@@ -19,11 +19,11 @@
 <tr>
   <th>
     Order number
-    <input type="text" id="numberInput" onkeyup="filterNumbers()" />
+    <input type="text" id="numberInput" onkeyup="filterTable()" />
   </th>
   <th>
     Customer
-    <select type="text" id="customerInput" onchange="filterCustomers()">
+    <select type="text" id="customerInput" onchange="filterTable()">
       <option value="all">All</option>
       <option value="GBG Stad">GBG Stad</option>
       <option value="VoO">VoO</option>
@@ -38,7 +38,7 @@
   <th>Note</th>
   <th>
     State
-    <select type="text" id="stateInput" onchange="filterState()">
+    <select type="text" id="stateInput" onchange="filterTable()">
       <option value="all">All</option>
       <option value="Arrived">Arrived</option>
       <option value="Ready">Ready</option>

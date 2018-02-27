@@ -14,14 +14,13 @@
 //= require turbolinks
 //= require_tree .
 function filterTable() {
-  valueNumber = document.getElementById("numberInput").value.toUpperCase();
-  valueCustomer = document.getElementById("customerInput").value.toUpperCase();
-  valueState = document.getElementById("stateInput").value.toUpperCase();
+  valueNumber = getValue("numberInput");
+  valueCustomer = getValue("customerInput");
+  valueState = getValue("stateInput");
   table = document.getElementById("orderTable");
   tr = table.getElementsByTagName("tr");
   for ( i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td");
-    //debugger;
     if (td.length > 0) {
       if (td[0].innerHTML.toUpperCase().indexOf(valueNumber) > -1 &&
           (td[1].innerHTML.toUpperCase().indexOf(valueCustomer) > -1 || valueCustomer === 'ALL') &&
@@ -34,17 +33,6 @@ function filterTable() {
   }
 }
 
-function filterCustomers() {
-  value = document.getElementById("customerInput").value.toUpperCase();
-  filterTable(value, 1);
-}
-
-function filterNumbers() {
-  value = document.getElementById("numberInput").value.toUpperCase();
-  filterTable(value, 0);
-}
-
-function filterState() {
-  value = document.getElementById("stateInput").value.toUpperCase();
-  filterTable(value, 7);
+function getValue(id) {
+  return document.getElementById(id).value.toUpperCase();
 }
