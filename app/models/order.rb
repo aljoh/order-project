@@ -11,11 +11,7 @@ class Order < ApplicationRecord
     end
 
     event :delivered do
-      transition Ready: :Delivered
-    end
-
-    event :order_done do
-      transition Delivered: :Done
+      transition Ready: :Done
     end
   end
 end
