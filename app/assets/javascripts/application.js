@@ -13,13 +13,19 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-function filterTable(value, index) {
+function filterTable() {
+  valueNumber = document.getElementById("numberInput").value.toUpperCase();
+  valueCustomer = document.getElementById("customerInput").value.toUpperCase();
+  valueState = document.getElementById("stateInput").value.toUpperCase();
   table = document.getElementById("orderTable");
   tr = table.getElementsByTagName("tr");
   for ( i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[index];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(value) > -1 || value == 'ALL') {
+    td = tr[i].getElementsByTagName("td");
+    //debugger;
+    if (td.length > 0) {
+      if (td[0].innerHTML.toUpperCase().indexOf(valueNumber) > -1 &&
+          (td[1].innerHTML.toUpperCase().indexOf(valueCustomer) > -1 || valueCustomer === 'ALL') &&
+          (td[7].innerHTML.toUpperCase().indexOf(valueState) > -1 || valueState === 'ALL') ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
