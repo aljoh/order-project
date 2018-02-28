@@ -12,7 +12,7 @@
 <%= form.label :order_date %>
 <%= form.text_field :order_date %>
 <%= form.label :dep %>
-<%= form.text_field :dep %>
+<%= form.select :dep, ['Yes', 'No Dep'], include_blank: true %>
 <%= form.label :pob %>
 <%= form.text_field :pob %>
 <%= form.label :delivered %>
