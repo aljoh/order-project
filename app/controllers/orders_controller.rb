@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   def create
     order = Order.create(order_params)
     if order.persisted?
-      flash[:notice] = "Order created"
+      flash[:notice] = "Order Created"
     else
       flash[:notice] = order.errors.full_messages
     end
@@ -21,7 +21,13 @@ class OrdersController < ApplicationController
   def update
     order = Order.find(params[:id])
     order.update(order_params)
-    redirect_to root_path
+    if order.changed?
+      flash[:notice] = "Order Edited"
+      redirect_to root_path
+    else
+      flash[:notice] = order.errors.full_messages[0]
+      redirect_back(fallback_location: { action: "edit", id: params[:id] } )
+    end
   end
 
   def destroy
