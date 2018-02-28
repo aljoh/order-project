@@ -10,7 +10,7 @@ class Order < ApplicationRecord
       transition Arrived: :Ready
     end
 
-    event :delivered do
+    event :delivered_to_customer do
       transition Ready: :Done
     end
   end
