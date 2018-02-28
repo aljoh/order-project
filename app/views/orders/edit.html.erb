@@ -1,6 +1,6 @@
 <h1>Edit Order</h1>
 
-<%= form_for @order do |form| %>
+<%= form_for @order, html: {class: "form-group"} do |form| %>
 <%= form.label :number %>
 <%= form.text_field :number %>
 <%= form.label :customer %>
