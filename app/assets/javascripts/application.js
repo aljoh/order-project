@@ -24,7 +24,7 @@ function filterTable() {
     if (td.length > 0) {
       if (td[0].innerHTML.toUpperCase().indexOf(valueNumber) > -1 &&
           (td[1].innerHTML.toUpperCase().indexOf(valueCustomer) > -1 || valueCustomer === 'ALL') &&
-          (td[7].innerHTML.toUpperCase().indexOf(valueState) > -1 || valueState === 'ALL') ) {
+          (td[10].innerHTML.toUpperCase().indexOf(valueState) > -1 || valueState === 'ALL') ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";

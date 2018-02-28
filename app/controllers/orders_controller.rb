@@ -20,12 +20,11 @@ class OrdersController < ApplicationController
 
   def update
     order = Order.find(params[:id])
-    order.update(order_params)
-    if order.changed?
+    if order.update(order_params)
       flash[:notice] = "Order Edited"
       redirect_to root_path
     else
-      flash[:notice] = order.errors.full_messages[0]
+      flash[:notice] = order.errors.full_messages.join(",")
       redirect_back(fallback_location: { action: "edit", id: params[:id] } )
     end
   end
@@ -33,6 +32,7 @@ class OrdersController < ApplicationController
   def destroy
     order = Order.find(params[:id])
     order.destroy
+    flash[:notice] = "Order Deleted"
     redirect_to root_path
   end
 

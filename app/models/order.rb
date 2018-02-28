@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
+  include ActiveModel::Dirty
   validates :number, :customer, :units, :order_date, presence: true
-  validates :pob, presence: true, if: :state_is_done?
+  validates :pob, :delivered, presence: true, if: :state_is_done?
   validates :dep, presence: true, if: :state_is_ready?
 
   def state_is_done?
