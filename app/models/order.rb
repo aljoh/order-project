@@ -1,9 +1,11 @@
 class Order < ApplicationRecord
   include ActiveModel::Dirty
-  validates :number, :customer, :units, :order_date, presence: true
+  validates :customer, presence: true
   validates :pob, :delivered, presence: true, if: :state_is_done?
   validates :dep, presence: true, if: :state_is_ready?
-
+  validates :order_date, presence: true, format: { with: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/ }
+  validates :units, presence: true, numericality: { greater_than: 0 }
+  validates :number, length: { is: 10 }
   def state_is_done?
     self.state == 'Done'
   end

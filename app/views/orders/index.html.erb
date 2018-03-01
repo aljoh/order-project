@@ -1,7 +1,7 @@
 <h2>New Order</h2>
 <%= form_for (@order) do |f| %>
   <%= f.label :number %>:
-  <%= f.text_field :number %>
+  <%= f.text_field :number, placeholder: "KO02000000" %>
   <%= f.label :customer %>:
   <%= f.select :customer, ['GBG Stad', 'VoO', 'Varberg PC', 'Varberg iPad'] %>
   <%= f.label :area %>:
