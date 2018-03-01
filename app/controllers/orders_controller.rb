@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     if order.persisted?
       flash[:notice] = "Order Created"
     else
-      flash[:notice] = order.errors.full_messages
+      flash[:notice] = order.errors.full_messages.join(",")
     end
     redirect_back(fallback_location: root_path)
   end

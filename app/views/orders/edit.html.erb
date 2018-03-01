@@ -1,26 +1,47 @@
 <h1>Edit Order</h1>
 
-<%= form_for @order, html: {class: "form-group"} do |form| %>
-<%= form.label :number %>
-<%= form.text_field :number %>
-<%= form.label :customer %>
-<%= form.select :customer, ['GBG Stad', 'VoO', 'Varberg PC', 'Varberg iPad'] %>
-<%= form.label :area %>
-<%= form.text_field :area %>
-<%= form.label :units %>
-<%= form.text_field :units %>
-<%= form.label :order_date %>
-<%= form.text_field :order_date %>
-<%= form.label :dep %>
-<%= form.select :dep, ['Yes', 'No Dep'], include_blank: true %>
-<%= form.label :pob %>
-<%= form.text_field :pob %>
-<%= form.label :delivered %>
-<%= form.text_field :delivered %>
-<%= form.label :note %>
-<%= form.text_field :note %>
-<%= form.label :state %>
-<%= form.select :state, ['Arrived', 'Ready', 'Done'] %>
-
-<%= form.submit %>
+<%= form_for @order, html: {class: "form-horizontal center"} do |form| %>
+<div class="form-group">
+  <%= form.label :number, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.text_field :number %>
+  </div>
+  <%= form.label :customer, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.select :customer, ['GBG Stad', 'VoO', 'Varberg PC', 'Varberg iPad'] %>
+  </div>
+  <%= form.label :area, class: "col-md-4 control-label"  %>
+  <div class ="col-md-8">
+    <%= form.text_field :area %>
+  </div>
+  <%= form.label :units, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.text_field :units %>
+  </div>
+  <%= form.label :order_date, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.text_field :order_date %>
+  </div>
+  <%= form.label :dep, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.select :dep, ['Yes', 'No Dep'], include_blank: true %>
+  </div>
+  <%= form.label :pob, class: "col-md-4 control-label" %>
+  <div class ="col-md-8">
+    <%= form.text_field :pob %>
+  </div>
+  <%= form.label :delivered %>
+  <div class ="col-md-8">
+    <%= form.text_field :delivered %>
+  </div>
+  <%= form.label :note %>
+  <div class ="col-md-8">
+    <%= form.text_field :note %>
+  </div>
+  <%= form.label :state %>
+  <div class ="col-md-8">
+    <%= form.select :state, ['Arrived', 'Ready', 'Done'] %>
+  </div>
+</div>
+<%= form.submit "Edit Order", class: "btn btn-default btn-primary" %>
 <% end %>
