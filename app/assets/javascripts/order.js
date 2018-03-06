@@ -1,9 +1,9 @@
 function filterTable() {
-  valueNumber = getValue("numberInput");
-  valueCustomer = getValue("customerInput");
-  valueState = getValue("stateInput");
-  table = document.getElementById("orderTable");
-  tr = table.getElementsByTagName("tr");
+  var valueNumber = getValue("numberInput");
+  var valueCustomer = getValue("customerInput");
+  var valueState = getValue("stateInput");
+  var table = document.getElementById("orderTable");
+  var tr = table.getElementsByTagName("tr");
   for ( i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td");
     if (td.length > 0) {
