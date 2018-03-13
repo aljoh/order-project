@@ -14,7 +14,6 @@ RSpec.describe Order, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of :number }
     it { is_expected.to validate_presence_of :customer }
     it { is_expected.to validate_presence_of :units }
     it { is_expected.to validate_presence_of :order_date }

@@ -21,7 +21,7 @@ Feature: Visit Homepage
     And I fill in "Note" with "ASAP"
     And I click on "Create Order"
     Then I should see "KO02050505"
-    And I should see "Order created"
+    And I should see "Order Created"
     And I should see "Arrived"
 
   Scenario: User edits order
